@@ -1,0 +1,29 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+.h-modal {
+  z-index: 100;
+}
+.menu-bar {
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+.menu-bar.show {
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+
+.search-box {
+  opacity: 0;
+  transform: translateY(-200%);
+  transition: all 0.5s ease;
+}
+
+.search-box.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}

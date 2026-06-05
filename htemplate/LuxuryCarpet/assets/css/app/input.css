@@ -1,0 +1,63 @@
+@import url("/htemplate/LuxuryCarpet/assets/icons/brands.min.css");
+@import url("/htemplate/LuxuryCarpet/assets/icons/fontawesome.min.css");
+@import url("/htemplate/LuxuryCarpet/assets/icons/solid.min.css");
+@import "tailwindcss";
+
+@theme {
+    --font-pinar: "mypinar", sans-serif;
+    --color-theme-primary: var(--theme-primary);
+    --color-theme-Tertiary: var(--theme-Tertiary);
+    --color-theme-secondary: var(--theme-secondary);
+    --color-theme-Quaternary:var(--theme-Quaternary);
+    --color-theme-light-primary:var(--theme-light-primary);
+    --color-theme-footer:var(--theme-footer);
+    --shadow-theme-xs: 0 0 15px 3px rgba(222, 222, 222,0.4);
+    --shadow-theme-sm: 0 0 10px 3px rgb(238, 238, 238);
+    --shadow-theme-md:0 0 12px -4px #646262;
+    --shadow-theme-xl:0 0 20px -3px #646262;
+    --radius-theme-2xl:5.5rem;
+    
+}
+
+:root {
+    --theme-primary: #dae6e1;
+    --theme-secondary: #a0c1b3;
+    --theme-Tertiary:#759d8d;
+    --theme-Quaternary:#4f7363;
+    --theme-footer:#cbd6d2;
+    --theme-light-primary:#97b3a7;
+}
+
+@utility container {
+    padding-inline: 0.5rem;
+    margin-inline: auto;
+}
+
+@layer base {
+    .input {
+        padding: .5rem;
+        border-radius: .25rem;
+        width: 100%;
+    }
+
+    .input:focus {
+        outline: 0;
+    }
+    .button{
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .Form-Fields{
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 25px;
+        width: 100%;
+        font-size: 14px;
+    }
+    .Form-Fields:focus{
+        outline: 1px solid var(--theme-Quaternary);
+    }
+}

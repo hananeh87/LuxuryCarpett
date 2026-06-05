@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "myIranYekan";
+  font-weight: normal;
+  font-display: swap;
+  src: url("../../fonts/iranyekan/ttf/iranyekanwebregular.ttf")
+      format("truetype"),
+    url("../../fonts/iranyekan/ttf/iranyekanwebbold.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "myIranYekan";
+  font-weight: bold;
+  font-display: swap;
+  src: url("../../fonts/iranyekan/woff/iranyekanwebregular.woff")
+      format("truetype"),
+    url("../../fonts/iranyekan/woff/iranyekanwebbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "mypinar";
+  font-weight: normal;
+  font-display: swap;
+  src: url("../../fonts/pinar/Pinar-Regular.ttf") format("truetype"),
+    url("../../fonts/pinar/Pinar-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "mypinar";
+  font-weight: bold;
+  font-display: swap;
+  src: url("../../fonts/pinar/Pinar-Bold.ttf") format("truetype"),
+    url("../../fonts/pinar/Pinar-Bold.woff2") format("woff");
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "myIranYekan", sans-serif;
+  direction: rtl;
+  color: var(--color-theme-Quaternary);
+}
+
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-theme-secondary);
+  border-radius: 20px;
+  border: 5px solid #fff;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 1rem;
+}
+
+@media (width >= 80rem /* 1280px */) {
+  .contain {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (width >= 80rem /* 1280px */) {
+  .contain2 {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+ul.submenu > li > ul {
+  min-width: 150px;
+  background-color: var(--color-theme-Tertiary);
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  top: 100%;
+  inset-inline-start: calc(var(--spacing) * 0);
+  opacity: 0;
+  transition: all 0.3s;
+  visibility: hidden;
+  box-shadow: 0 0 15px 3px rgba(105, 105, 105, 0.4);
+  z-index: 100;
+  font-size: 13px;
+}
+
+ul.submenu li {
+  position: relative;
+}
+
+ul.submenu li ul li {
+  padding: 10px;
+  transition: all 0.3s;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+ul.submenu li ul li:hover {
+  background-color: var(--color-theme-secondary);
+  border-radius: 10px;
+  color: white;
+}
+
+ul.submenu > li ul li ul {
+  min-width: 150px;
+  background-color: var(--color-theme-Tertiary);
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  inset-inline-start: calc(var(--spacing) * 36);
+  opacity: 0;
+  transition: all 0.3s;
+  visibility: hidden;
+  box-shadow: 0 0 15px 3px rgba(105, 105, 105, 0.4);
+  z-index: 100;
+}
+
+ul.submenu > li ul li:hover i {
+  transform: rotate(270deg);
+}
+
+ul.submenu > li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+ul.submenu > li ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* استایل دکمه*/
+.bubbles {
+  --size-letter: 20px;
+  padding: 0.7em 1.7em;
+  background-color: var(--color-theme-Quaternary);
+  border: calc(var(--size-letter) / 6) solid var(--c2);
+  border-radius: 0.6em;
+  cursor: pointer;
+
+  overflow: hidden;
+  position: relative;
+  transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.bubbles > .text {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.bubbles::before {
+  top: 0;
+  left: 0;
+}
+
+.bubbles::after {
+  top: 100%;
+  left: 100%;
+}
+
+.bubbles::before,
+.bubbles::after {
+  content: "";
+  width: 150%;
+  aspect-ratio: 1/1;
+  scale: 0;
+  transition: 1000ms cubic-bezier(0.76, 0, 0.24, 1);
+
+  background-color: var(--color-theme-Tertiary);
+  border-radius: 50%;
+
+  position: absolute;
+  translate: -50% -50%;
+}
+
+.bubbles:hover {
+  & > span {
+    color: #fff;
+  }
+  &::before,
+  &::after {
+    scale: 1;
+  }
+}
+
+.bubbles:active {
+  scale: 0.98;
+  filter: brightness(0.9);
+}
+/* استایل دکمه*/
