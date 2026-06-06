@@ -1,6 +1,6 @@
-@import url("/htemplate/LuxuryCarpet/assets/icons/brands.min.css");
-@import url("/htemplate/LuxuryCarpet/assets/icons/fontawesome.min.css");
-@import url("/htemplate/LuxuryCarpet/assets/icons/solid.min.css");
+@import url('../../icons/brands.min.css');
+@import url('../../icons/fontawesome.min.css');
+@import url('../../icons/solid.min.css');
 @import "tailwindcss";
 
 @theme {
