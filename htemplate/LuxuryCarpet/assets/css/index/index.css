@@ -104,22 +104,22 @@
 }
 
 .back1-blog {
-  background-image: url(/htemplate/LuxuryCarpet/assets/image/index/archive3.jpg);
+  background-image: url('../../image/index/archive3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .back2-blog {
-  background-image: url(/htemplate/LuxuryCarpet/assets/image/index/carpet2.jpg);
+  background-image: url('../../image/index/carpet2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .back3-blog {
-  background-image: url(/htemplate/LuxuryCarpet/assets/image/index/weblog-carpet2.jpg);
+  background-image: url('../../image/index/weblog-carpet2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .back4-blog {
-  background-image: url(/htemplate/LuxuryCarpet/assets/image/index/page-weblog.jpg);
+  background-image: url('../../image/index/page-weblog.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
